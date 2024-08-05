@@ -1,0 +1,36 @@
+.maindiv {
+  margin: auto;
+  width: 400px;
+}
+h1 {
+  text-align: center;
+}
+input {
+  width: 90%;
+  height: 40px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 20px;
+  border-radius: 7px;
+}
+.lastinput {
+  width: 91%;
+  border-radius: 0%;
+  height: 40px;
+  border: 1px solid green;
+  margin-top: 20px;
+  border: none;
+}
+button {
+  width: 91%;
+  height: 40px;
+  margin-top: 20px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(6, 38, 6);
+  border-radius: 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(1, 46, 1);
+}

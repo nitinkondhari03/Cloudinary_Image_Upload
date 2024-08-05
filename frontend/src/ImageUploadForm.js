@@ -1,7 +1,7 @@
 // src/ImageUploadForm.js
 import React, { useState } from "react";
 import axios from "axios";
-
+import "./ImageUploadForm.css";
 const ImageUploadForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -51,59 +51,63 @@ const ImageUploadForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>First Name:</label>
-        <input
-          type="text"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Last Name:</label>
-        <input
-          type="text"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Image:</label>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-          required
-        />
-        {preview && <img src={preview} alt="Image Preview" width="100" />}
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div className="maindiv">
+      <h1>Form</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <div>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="file"
+            placeholder="Image"
+            accept="image/*"
+            onChange={handleImageChange}
+            required
+            className="lastinput"
+          />
+          {preview && <img src={preview} alt="Image Preview" width="100" />}
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 
